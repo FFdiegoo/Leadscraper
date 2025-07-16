@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useAuth } from '@/components/AuthProvider'
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
-import { Database, Settings, Activity, LogOut } from 'lucide-react'
+import { Database, Settings, Activity, LogOut, Users } from 'lucide-react'
 
 export default function Navigation() {
   const { user, signOut } = useAuth()
@@ -32,6 +32,13 @@ export default function Navigation() {
               <Button variant="ghost" className="text-gray-300 hover:text-orange-400 hover:bg-gray-800">
                 <Database className="w-4 h-4 mr-2" />
                 Dashboard
+              </Button>
+            </Link>
+            
+            <Link href="/leads">
+              <Button variant="ghost" className="text-gray-300 hover:text-orange-400 hover:bg-gray-800">
+                <Users className="w-4 h-4 mr-2" />
+                Leads
               </Button>
             </Link>
             
